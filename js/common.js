@@ -140,6 +140,10 @@ $(function(){
        for(i=0; i<$(".bbox-ani").length; i++){
            $(".section").eq(activeIndex).find(".bbox-ani").eq(i).addClass("bannerActive")
        }
+       $(".dbox-ani").removeClass("detailActive");
+       for(i=0; i<$(".dbox-ani").length; i++){
+           $(".section").eq(activeIndex).find(".dbox-ani").eq(i).addClass("detailActive")
+       }
     }
    $animation();
    // //////////////////////////////////////////////////////////////////////

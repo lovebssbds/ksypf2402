@@ -51,6 +51,7 @@ section{
     align-items: center;
     /* 수정 */
     position:relative;
+    overflow: hidden;
 }
 
 header{
@@ -441,7 +442,13 @@ section:nth-child(3){
     transition:1s;
     opacity:0;
 }
-/* 애니메이션 추가 */
+.dbox-ani.detailActive{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.dbox-divs img{
+    width:100%;
+}
 .bbox-ani:nth-child(1){
     transition-delay:0.7s;
 }
@@ -485,6 +492,74 @@ section:nth-child(3){
 /* section:nth-child(4){
     height:100px !important;
 } */
+#detail{
+    flex-direction: column;
+}
+
+#detail>div:first-child{
+    margin:20px;
+    width:90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.dbt{
+    width:50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    font-size: 35px;
+    color:#ddd;
+    transition:color 200ms;
+}
+.dbt:hover{
+    color:#333;
+}
+.dbox-divs{
+    display: none;
+}
+.dbox-slide-g{
+    width:90%;
+    height: 70vh;
+    overflow: hidden;
+    margin: auto;
+}
+.dbox-slides{
+    width:300%;
+    height: 100%;
+    display: flex;
+    justify-content:flex-start;
+    position:relative;
+}
+.dbox-slide{
+    width:33.333%;
+    height: 100%;
+    padding: 5px;
+    position:relative;
+    display: flex;
+    align-items: flex-start;
+}
+.dbox-slide p{
+    position:absolute;
+    top:25%;
+    left:50%;
+    transform: translate(-50%,0);
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    width:fit-content;
+    padding:5px 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.dbox-slide img{
+    width:100%;
+}
+
+
+
+
+
 #skill{
     flex-direction: column;
 }
@@ -559,6 +634,49 @@ section:nth-child(3){
     }
     .bbox-divs{
         width:80%;
+    }
+    .dbt{
+        display: none;
+    }
+    .detail-box{
+        width:100%;
+        height:70%;
+        padding:0 20px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap:wrap;
+        flex-direction:row
+    }
+    .dbox-divs{
+        width:80%;
+        display:flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap:wrap;
+        margin:auto;
+        /* border:1px solid black; */
+        
+    }
+    .dbox-ani{
+        width: 30%;
+        padding:10px;
+        /* 애니메니션 보완 */
+        transform:translate(0, 20%);
+        transition-delay:0.5s;
+        transition:1s;
+        opacity:0;
+        overflow: hidden;
+    }
+    /* 애니메이션 추가 */
+    .dbox-ani:nth-child(1){
+        transition-delay:0.7s;
+    }
+    .dbox-ani:nth-child(2){
+        transition-delay:0.9s;
+    }
+    .dbox-ani:nth-child(3){
+        transition-delay:1.1s;
     }
 }
 @media screen and (min-width:1024px){
