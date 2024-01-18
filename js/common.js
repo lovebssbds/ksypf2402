@@ -144,6 +144,10 @@ $(function(){
        for(i=0; i<$(".dbox-ani").length; i++){
            $(".section").eq(activeIndex).find(".dbox-ani").eq(i).addClass("detailActive")
        }
+       $(".ibox-ani").removeClass("iconActive");
+       for(i=0; i<$(".ibox-ani").length; i++){
+           $(".section").eq(activeIndex).find(".ibox-ani").eq(i).addClass("iconActive")
+       }
     }
    $animation();
    // //////////////////////////////////////////////////////////////////////
