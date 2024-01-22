@@ -367,12 +367,13 @@ section:nth-child(2){
 .side-nav a:after{
     content:"About";
     position:absolute;
-    width:100px;
+    width:60px;
     right:40px;
     text-align:right;
     top:50%;
     transform:translate(0, -50%);
     width:0px;
+    padding-right: 0;
     overflow:hidden;
     transition:width 0.5s;
 }
@@ -403,17 +404,18 @@ section:nth-child(2){
     font-weight:700;
 }
 .side-nav a.side-active:after{
-    width:100px;
+    width:60px;
     color:#333;
+    /* background-color: white; */
 }
 .side-nav a.side-active{
     background-color:skyblue;
 }
 section:nth-child(3){
     flex-direction: column;
-    padding:70px 0;
 }
 #banner h2{
+    margin-top: 70px;
     text-align:center;
 }
 .banner-box{
@@ -606,8 +608,23 @@ section:nth-child(3){
     transition-delay: 2.1s;
 }
 
-
-
+.skill-box{
+    width:100%
+}
+.skill-divs{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.skill-ani{
+    width:20%;
+    margin :20px;
+}
+.skill-ani img{
+    width:100%;
+}
 
 
 #skill{
@@ -688,10 +705,6 @@ section:nth-child(3){
     .dbt{
         display: none;
     }
-    #detail{
-        justify-content: center;
-        
-    }
     .detail-box{
         width:100%;
         height:50%;
@@ -736,6 +749,10 @@ section:nth-child(3){
         grid-template-columns: repeat(4,minmax(50px,1fr));
         grid-template-rows: repeat(auto-fill, minmax(50px,1fr));
         grid-gap: 1.5rem;
+    }
+    .skill-ani{
+        width:15%;
+        margin :20px;
     }
 }
 @media screen and (min-width:1024px){
