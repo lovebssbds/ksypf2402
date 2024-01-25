@@ -223,4 +223,27 @@ $(function(){
    }// wheel함수 끝
    wheel();
    /* *************************************************************************** */
+
+   //dbox modal
+   $(".dbox-ani a").each(function(){
+    $(this).click(function(){
+        $(".img-modal").show();
+        $(".img-modal-body h2").text( $(this).find("h2").text() );
+        $(".img-modal-body .img").html( $(this).find("p").html() );
+        $(".img-modal-body .link-close a").attr("href", $(this).find("p img").attr("src"))
+        return false;  
+     })
+    })
+    $(".dbox-slide a").each(function(){
+        $(this).click(function(){
+            $(".img-modal").show();
+            $(".img-modal-body h2").text( $(this).find("h2").text() );
+            $(".img-modal-body .img").html( $(this).find("p").html() );
+            $(".img-modal-body .link-close a").attr("href", $(this).find("p img").attr("src"))
+            return false;  
+        })
+    })
+    $(".img-modal-close").click(function(){
+        $(".img-modal").hide();
+    })
 })
