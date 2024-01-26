@@ -231,7 +231,8 @@ $(function(){
         $(".img-modal-body h2").text( $(this).find("h2").text() );
         $(".img-modal-body .img").html( $(this).find("p").html() );
         $(".img-modal-body .link-close a").attr("href", $(this).find("p img").attr("src"))
-        return false;  
+        $(".section").off();
+        return false;
      })
     })
     $(".dbox-slide a").each(function(){
@@ -240,10 +241,12 @@ $(function(){
             $(".img-modal-body h2").text( $(this).find("h2").text() );
             $(".img-modal-body .img").html( $(this).find("p").html() );
             $(".img-modal-body .link-close a").attr("href", $(this).find("p img").attr("src"))
-            return false;  
+            $(".section").off();
+            return false;
         })
     })
     $(".img-modal-close").click(function(){
         $(".img-modal").hide();
+        wheel();
     })
 })

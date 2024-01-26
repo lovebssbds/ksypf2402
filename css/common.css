@@ -466,7 +466,7 @@ section:nth-child(3){
 }
 .img-modal-body{
     width:25vw;
-    min-width: 200px;
+    min-width: 300px;
     height:90%;
     background-color:white;
     position:relative;
@@ -604,7 +604,7 @@ section:nth-child(3){
     display: flex;
     align-items: flex-start;
 }
-.dbox-slide p{
+.dbox-slide>p{
     position:absolute;
     top:25%;
     left:50%;
@@ -624,8 +624,8 @@ section:nth-child(3){
     flex-direction: column;
 }
 .icon-box{
-    width:90%;
-    height:70%;
+    width:70%;
+    height:60%;
 }
 .ibox-divs{
     display: grid;
@@ -678,12 +678,15 @@ section:nth-child(3){
     transition-delay: 2.1s;
     width:30%;
 }
-
+#skill h2{
+    margin-bottom: 1.5rem;
+}
 .skill-box{
     width:100%
 }
 .skill-divs{
-    width:100%;
+    width:70%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
