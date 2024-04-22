@@ -458,6 +458,9 @@ section:nth-child(3){
     transition:1s;
     opacity:0;
 }
+.bbox-ani h2{
+    display: none;
+}
 .dbox-ani.detailActive{
     opacity: 1;
     transform: translate(0,0);
